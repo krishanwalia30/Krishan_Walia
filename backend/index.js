@@ -30,7 +30,7 @@ const subscriberSchema = new mongoose.Schema({
 })
 
 // Creating a Model as per the Schema
-const Subscribers = model('Subscribers', subscriberSchema);
+const Subscribers = mongoose.model('Subscribers', subscriberSchema);
 
 // Adding the subscriber 
 app.post("/add", async function (req, res) {
