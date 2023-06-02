@@ -1,0 +1,7 @@
+{
+    "dart.flutterGenerateLocalizationsOnSave": "never",
+    "dart.flutterHotReloadOnSave": "all",
+    "dart.hotReloadOnSave": "all",
+    "dart.previewHotReloadOnSaveWatcher": true,
+    "editor.formatOnSave": true
+}
