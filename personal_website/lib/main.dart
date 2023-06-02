@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_website/Database/mongoDb.dart';
 import 'package:personal_website/project/app_route_config.dart';
 import 'package:personal_website/themes/theme_constants.dart';
 import 'package:personal_website/themes/theme_manager.dart';
@@ -7,7 +6,7 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await MongoDatabase.connect();
+  // await MongoDatabase.connect();
   runApp(MyApp());
 }
 
