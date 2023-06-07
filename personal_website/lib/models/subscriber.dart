@@ -2,23 +2,23 @@
 import 'dart:convert';
 
 class Subscriber {
-  String? id;
+  String? emailid;
 
   // Constructor of the subscriber
   Subscriber({
-    this.id,
+    this.emailid,
   });
 
   // Json Serialization for the Subscriber
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
+    return {
+      'emailid': emailid,
     };
   }
 
   factory Subscriber.fromMap(Map<String, dynamic> map) {
     return Subscriber(
-      id: map['id'] != null ? map['id'] as String : null,
+      emailid: map['emailid'],
     );
   }
 

@@ -7,11 +7,11 @@ import 'package:url_launcher/url_launcher_string.dart';
 import '../../commonWidgets/BlogPageWidgets/container3Widget.dart';
 
 class Container4 extends StatelessWidget {
-  final double permissibleWidth;
+  // final double permissibleWidth;
   final double permissibleHeight;
   const Container4({
     Key? key,
-    required this.permissibleWidth,
+    // required this.permissibleWidth,
     required this.permissibleHeight,
   }) : super(key: key);
 
@@ -19,7 +19,7 @@ class Container4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: permissibleHeight,
-      width: permissibleWidth,
+      width: MediaQuery.of(context).size.width,
       margin: marginBoth,
       child: Row(
         children: [

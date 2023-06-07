@@ -13,8 +13,8 @@ class BlogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double permissibleWidth = MediaQuery.of(context).size.width - 224;
-    double permissibleHeight = 432;
+    // double permissibleWidth = MediaQuery.of(context).size.width - 224;
+    // double permissibleHeight = 432;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -52,11 +52,11 @@ class BlogPage extends StatelessWidget {
             ),
             Container3(
               permissibleHeight: 340,
-              permissibleWidth: MediaQuery.of(context).size.width - 224,
+              // permissibleWidth: MediaQuery.of(context).size.width - 224,
             ),
             Container4(
               permissibleHeight: 340,
-              permissibleWidth: MediaQuery.of(context).size.width - 224,
+              // permissibleWidth: MediaQuery.of(context).size.width - 224,
             ),
             const SizedBox(
               height: 40,
