@@ -4,7 +4,7 @@ import 'package:personal_website/utils/constants.dart';
 import 'package:personal_website/utils/BlogPageConstants/allData.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../commonWidgets/BlogPageWidgets/container3Widget.dart';
+import '../../commonWidgets/containerContentWidget.dart';
 
 class Container4 extends StatelessWidget {
   // final double permissibleWidth;
@@ -30,7 +30,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[7].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[7].ImageLink,
                 title: AllBlogs[7].Title,
                 desc: AllBlogs[7].Desc,
@@ -47,7 +47,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[8].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[8].ImageLink,
                 title: AllBlogs[8].Title,
                 desc: AllBlogs[8].Desc,
@@ -64,7 +64,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[9].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[9].ImageLink,
                 title: AllBlogs[9].Title,
                 desc: AllBlogs[9].Desc,

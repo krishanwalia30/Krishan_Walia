@@ -8,6 +8,7 @@ import 'package:personal_website/utils/constants.dart';
 import 'package:validated/validated.dart' as validate;
 
 import '../commonWidgets/footer.dart';
+import '../utils/BlogPageConstants/allData.dart';
 
 class NewsletterPage extends StatefulWidget {
   const NewsletterPage({super.key});
@@ -146,7 +147,7 @@ class _NewsletterPageState extends State<NewsletterPage> {
                               backgroundColor:
                                   Color.fromARGB(255, 206, 253, 210),
                               dismissDirection: DismissDirection.horizontal,
-                              duration: Duration(milliseconds: 500),
+                              duration: Duration(milliseconds: 1000),
                             ));
                           }
                         },
@@ -180,11 +181,19 @@ class _NewsletterPageState extends State<NewsletterPage> {
               height: 15,
             ),
             Container3(
-                // permissibleWidth: MediaQuery.of(context).size.width,
-                permissibleHeight: 400),
-            Container4(
-                // permissibleWidth: MediaQuery.of(context).size.width,
-                permissibleHeight: 400),
+              projectsPage: false,
+              content: [
+                AllBlogs[4],
+                AllBlogs[5],
+                AllBlogs[6],
+              ],
+              // permissibleWidth: MediaQuery.of(context).size.width,
+              permissibleHeight: 340,
+            ),
+            const Container4(
+              // permissibleWidth: MediaQuery.of(context).size.width,
+              permissibleHeight: 340,
+            ),
             const SizedBox(
               height: 40,
             ),

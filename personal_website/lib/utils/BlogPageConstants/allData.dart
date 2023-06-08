@@ -1,23 +1,8 @@
 import 'package:flutter/material.dart';
 
-///  This file contains all the data of the blogs and the articles
-class ContainerData {
-  String ImageLink;
-  String Title;
-  String Desc;
-  String Url;
-  String Date;
-  String Tags;
+import '../constants.dart';
 
-  ContainerData({
-    required this.ImageLink,
-    required this.Title,
-    required this.Desc,
-    required this.Url,
-    required this.Date,
-    required this.Tags,
-  });
-}
+///  This file contains all the data of the blogs and the articles
 
 // List of all the blogs in one place
 List<ContainerData> AllBlogs = [
