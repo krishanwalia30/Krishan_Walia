@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:personal_website/commonWidgets/containe2content.dart';
+import 'package:personal_website/commonWidgets/footer.dart';
 import 'package:personal_website/commonWidgets/navbar.dart';
+import 'package:personal_website/pageWidgets/blogPageWidgets/container3.dart';
+import 'package:personal_website/utils/ProjectsPageConstants/ProjectsData.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -11,6 +15,24 @@ class ProjectsPage extends StatelessWidget {
         child: Column(
           children: [
             NavBar(pageName: 'PROJECTS'),
+            Container3(
+              projectsPage: true,
+              content: [
+                allProjects[0],
+                allProjects[1],
+                allProjects[2],
+              ],
+              permissibleHeight: 340,
+            ),
+            // const SizedBox(height: 40),
+            Container2content(
+                projectsPage: true,
+                content: [
+                  allProjects[3],
+                  allProjects[4],
+                ],
+                permissibleHeight: 340),
+            Footer(),
           ],
         ),
       ),

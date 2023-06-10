@@ -6,12 +6,12 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../commonWidgets/containerContentWidget.dart';
 
-class Container3 extends StatelessWidget {
+class Container2content extends StatelessWidget {
   final bool projectsPage;
   final List<ContainerData> content;
   // final double permissibleWidth;
   final double permissibleHeight;
-  const Container3({
+  const Container2content({
     Key? key,
     required this.projectsPage,
     required this.content,
@@ -75,31 +75,31 @@ class Container3 extends StatelessWidget {
                     ),
             ),
           ),
-          const SizedBox(width: 15),
-          Flexible(
-            flex: 1,
-            child: InkWell(
-              hoverColor: Colors.transparent,
-              onTap: () {
-                launchUrlString(content[2].Url);
-              },
-              child: (projectsPage)
-                  ? ContainerContentWidgetProject(
-                      imageLink: content[2].ImageLink,
-                      title: content[2].Title,
-                      desc: content[2].Desc,
-                      date: content[2].Date,
-                      tag: content[2].Tags,
-                    )
-                  : ContainerContentWidget(
-                      imageLink: content[2].ImageLink,
-                      title: content[2].Title,
-                      desc: content[2].Desc,
-                      date: content[2].Date,
-                      tag: content[2].Tags,
-                    ),
-            ),
-          ),
+          // const SizedBox(width: 15),
+          // Flexible(
+          //   flex: 1,
+          //   child: InkWell(
+          //     hoverColor: Colors.transparent,
+          //     onTap: () {
+          //       launchUrlString(content[2].Url);
+          //     },
+          //     child: (projectsPage)
+          //         ? ContainerContentWidgetProject(
+          //             imageLink: content[1].ImageLink,
+          //             title: content[1].Title,
+          //             desc: content[1].Desc,
+          //             date: content[1].Date,
+          //             tag: content[1].Tags,
+          //           )
+          //         : ContainerContentWidget(
+          //             imageLink: content[2].ImageLink,
+          //             title: content[2].Title,
+          //             desc: content[2].Desc,
+          //             date: content[2].Date,
+          //             tag: content[2].Tags,
+          //           ),
+          //   ),
+          // ),
         ],
       ),
     );

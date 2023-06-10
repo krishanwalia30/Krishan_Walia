@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_website/commonWidgets/footer.dart';
 import 'package:personal_website/pageWidgets/blogPageWidgets/container2.dart';
 import 'package:personal_website/pageWidgets/blogPageWidgets/container3.dart';
+import 'package:personal_website/utils/BlogPageConstants/allData.dart';
 import 'package:personal_website/utils/constants.dart';
 import 'package:personal_website/commonWidgets/navbar.dart';
 
@@ -13,8 +14,8 @@ class BlogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double permissibleWidth = MediaQuery.of(context).size.width - 224;
-    double permissibleHeight = 432;
+    // double permissibleWidth = MediaQuery.of(context).size.width - 224;
+    // double permissibleHeight = 432;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -51,12 +52,14 @@ class BlogPage extends StatelessWidget {
               ),
             ),
             Container3(
+              projectsPage: false,
+              content: [AllBlogs[4], AllBlogs[5], AllBlogs[6]],
               permissibleHeight: 340,
-              permissibleWidth: MediaQuery.of(context).size.width - 224,
+              // permissibleWidth: MediaQuery.of(context).size.width - 224,
             ),
             Container4(
               permissibleHeight: 340,
-              permissibleWidth: MediaQuery.of(context).size.width - 224,
+              // permissibleWidth: MediaQuery.of(context).size.width - 224,
             ),
             const SizedBox(
               height: 40,

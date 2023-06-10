@@ -4,14 +4,14 @@ import 'package:personal_website/utils/constants.dart';
 import 'package:personal_website/utils/BlogPageConstants/allData.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../commonWidgets/BlogPageWidgets/container3Widget.dart';
+import '../../commonWidgets/containerContentWidget.dart';
 
 class Container4 extends StatelessWidget {
-  final double permissibleWidth;
+  // final double permissibleWidth;
   final double permissibleHeight;
   const Container4({
     Key? key,
-    required this.permissibleWidth,
+    // required this.permissibleWidth,
     required this.permissibleHeight,
   }) : super(key: key);
 
@@ -19,7 +19,7 @@ class Container4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: permissibleHeight,
-      width: permissibleWidth,
+      width: MediaQuery.of(context).size.width,
       margin: marginBoth,
       child: Row(
         children: [
@@ -30,7 +30,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[7].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[7].ImageLink,
                 title: AllBlogs[7].Title,
                 desc: AllBlogs[7].Desc,
@@ -47,7 +47,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[8].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[8].ImageLink,
                 title: AllBlogs[8].Title,
                 desc: AllBlogs[8].Desc,
@@ -64,7 +64,7 @@ class Container4 extends StatelessWidget {
               onTap: () {
                 launchUrlString(AllBlogs[9].Url);
               },
-              child: Container3Widget(
+              child: ContainerContentWidget(
                 imageLink: AllBlogs[9].ImageLink,
                 title: AllBlogs[9].Title,
                 desc: AllBlogs[9].Desc,
