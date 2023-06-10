@@ -67,7 +67,7 @@ class ContainerContentWidgetProject extends StatelessWidget {
     return Column(
       children: [
         Flexible(
-          flex: 4,
+          flex: 3,
           child: Image(
             image: AssetImage(imageLink),
             fit: BoxFit.cover,

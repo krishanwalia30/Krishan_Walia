@@ -22,7 +22,7 @@ class ProjectsPage extends StatelessWidget {
                 allProjects[1],
                 allProjects[2],
               ],
-              permissibleHeight: 420,
+              permissibleHeight: 340,
             ),
             // const SizedBox(height: 40),
             Container2content(
@@ -31,7 +31,7 @@ class ProjectsPage extends StatelessWidget {
                   allProjects[3],
                   allProjects[4],
                 ],
-                permissibleHeight: 400),
+                permissibleHeight: 340),
             Footer(),
           ],
         ),
