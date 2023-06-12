@@ -27,7 +27,7 @@ class NavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Your Name',
+                'Krishan Walia',
                 style: TextStyle(
                   fontStyle: FontStyle.normal,
                   fontSize: 20,
