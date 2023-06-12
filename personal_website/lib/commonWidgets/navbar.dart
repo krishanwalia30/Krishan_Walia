@@ -15,96 +15,103 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeManager _themeManagerProvider = Provider.of<ThemeManager>(context);
+    // ThemeManager _themeManagerProvider =
+    //     Provider.of<ThemeManager>(context, listen: false);
 
     return Column(
       children: [
         Container(
           width: MediaQuery.of(context).size.width,
+          // height: 80,
           // padding: EdgeInsets.symmetric(horizontal: 112, vertical: 48),
           margin: marginBoth,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Your Name',
+                'Krishan Walia',
                 style: TextStyle(
                   fontStyle: FontStyle.normal,
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Row(
-                children: [
-                  TextButton(
-                    child: const Text(
-                      'Blog',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    onPressed: () {
+              (MediaQuery.of(context).size.width <= 740)
+                  ? DrawerButton(onPressed: () {
                       GoRouter.of(context)
-                          .goNamed(MyAppRoutesConstants.blogRouteName);
-                    },
-                  ),
-                  const SizedBox(width: 14),
-                  TextButton(
-                    child: const Text(
-                      'Projects',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
+                          .goNamed(MyAppRoutesConstants.drawerRouteName);
+                    })
+                  : Row(
+                      children: [
+                        TextButton(
+                          child: const Text(
+                            'Blog',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          onPressed: () {
+                            GoRouter.of(context)
+                                .goNamed(MyAppRoutesConstants.blogRouteName);
+                          },
+                        ),
+                        const SizedBox(width: 14),
+                        TextButton(
+                          child: const Text(
+                            'Projects',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          onPressed: () {
+                            GoRouter.of(context).goNamed(
+                                MyAppRoutesConstants.projectsRouteName);
+                          },
+                        ),
+                        const SizedBox(width: 14),
+                        TextButton(
+                          child: const Text(
+                            'About',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          onPressed: () {
+                            GoRouter.of(context)
+                                .goNamed(MyAppRoutesConstants.aboutRouteName);
+                          },
+                        ),
+                        const SizedBox(width: 14),
+                        TextButton(
+                          child: const Text(
+                            'Newsletter',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          onPressed: () {
+                            GoRouter.of(context).goNamed(
+                                MyAppRoutesConstants.newsletterRouteName);
+                          },
+                        ),
+                        const SizedBox(width: 14),
+                        Consumer<ThemeManager>(
+                          builder: (context, value, child) {
+                            return Switch(
+                                value: (value.themeMode == ThemeMode.dark)
+                                    ? true
+                                    : false,
+                                onChanged: (val) {
+                                  value.toggleTheme(val);
+                                });
+                          },
+                        )
+                      ],
                     ),
-                    onPressed: () {
-                      GoRouter.of(context)
-                          .goNamed(MyAppRoutesConstants.projectsRouteName);
-                    },
-                  ),
-                  const SizedBox(width: 14),
-                  TextButton(
-                    child: const Text(
-                      'About',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    onPressed: () {
-                      GoRouter.of(context)
-                          .goNamed(MyAppRoutesConstants.aboutRouteName);
-                    },
-                  ),
-                  const SizedBox(width: 14),
-                  TextButton(
-                    child: const Text(
-                      'Newsletter',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    onPressed: () {
-                      GoRouter.of(context)
-                          .goNamed(MyAppRoutesConstants.newsletterRouteName);
-                    },
-                  ),
-                  const SizedBox(width: 14),
-                  Consumer<ThemeManager>(
-                    builder: (context, value, child) {
-                      return Switch(
-                          value: (value.themeMode == ThemeMode.dark)
-                              ? true
-                              : false,
-                          onChanged: (val) {
-                            value.toggleTheme(val);
-                          });
-                    },
-                  )
-                ],
-              ),
             ],
           ),
         ),

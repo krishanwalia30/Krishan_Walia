@@ -23,7 +23,7 @@ class Container3 extends StatelessWidget {
     return Container(
       height: permissibleHeight,
       width: MediaQuery.of(context).size.width,
-      margin: marginBoth,
+      margin: marginHorizontal,
       child: Row(
         children: [
           Flexible(

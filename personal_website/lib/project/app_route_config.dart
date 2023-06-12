@@ -4,6 +4,7 @@ import 'package:personal_website/project/app_route_constants.dart';
 
 import '../pages/about.dart';
 import '../pages/blog.dart';
+import '../pages/drawer.dart';
 import '../pages/newsletter.dart';
 import '../pages/projects.dart';
 
@@ -33,6 +34,12 @@ class MyAppRouter {
           path: '/newsletter',
           pageBuilder: (context, state) {
             return MaterialPage(child: NewsletterPage());
+          }),
+      GoRoute(
+          name: MyAppRoutesConstants.drawerRouteName,
+          path: '/navigation',
+          pageBuilder: (context, state) {
+            return MaterialPage(child: DrawerPage());
           }),
     ]);
     return router;
