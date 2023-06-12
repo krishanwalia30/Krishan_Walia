@@ -24,7 +24,7 @@ class AboutPage extends StatelessWidget {
                 children: [
                   profilePicture(
                     context,
-                    'assets/images/profilePicture.jpg',
+                    'https://avatars.githubusercontent.com/u/101003187?v=4',
                   ),
                   const SizedBox(height: 15),
                   AboutContentContainer('About Me', AboutMe),
@@ -93,7 +93,7 @@ class AboutPage extends StatelessWidget {
   Widget techKnowledgeContent(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      height: (MediaQuery.of(context).size.width <= 850) ? 620 : 330,
+      height: (MediaQuery.of(context).size.width <= 850) ? 620 : 325,
       child: Flex(
         direction: (MediaQuery.of(context).size.width <= 850)
             ? Axis.vertical

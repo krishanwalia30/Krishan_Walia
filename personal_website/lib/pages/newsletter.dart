@@ -8,6 +8,7 @@ import 'package:personal_website/utils/constants.dart';
 import 'package:validated/validated.dart' as validate;
 
 import '../commonWidgets/footer.dart';
+import '../commonWidgets/mobileLayout.dart';
 import '../utils/BlogPageConstants/allData.dart';
 
 class NewsletterPage extends StatefulWidget {
@@ -45,8 +46,8 @@ class _NewsletterPageState extends State<NewsletterPage> {
             FittedBox(
               child: Container(
                 margin: marginBoth,
-                child: Column(
-                  children: const [
+                child: const Column(
+                  children: [
                     Text(
                       'Stories and Interviews',
                       style: TextStyle(
@@ -178,22 +179,30 @@ class _NewsletterPageState extends State<NewsletterPage> {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 35,
             ),
-            Container3(
-              projectsPage: false,
-              content: [
-                AllBlogs[4],
-                AllBlogs[5],
-                AllBlogs[6],
-              ],
-              // permissibleWidth: MediaQuery.of(context).size.width,
-              permissibleHeight: 340,
-            ),
-            const Container4(
-              // permissibleWidth: MediaQuery.of(context).size.width,
-              permissibleHeight: 340,
-            ),
+            (MediaQuery.of(context).size.width <= 700)
+                ? const MobileBlogLayout(
+                    contentIndex: [4, 5, 6],
+                  )
+                : Container3(
+                    projectsPage: false,
+                    content: [
+                      AllBlogs[4],
+                      AllBlogs[5],
+                      AllBlogs[6],
+                    ],
+                    // permissibleWidth: MediaQuery.of(context).size.width,
+                    permissibleHeight: 340,
+                  ),
+            (MediaQuery.of(context).size.width <= 700)
+                ? const MobileBlogLayout(
+                    contentIndex: [7, 8, 9],
+                  )
+                : const Container4(
+                    // permissibleWidth: MediaQuery.of(context).size.width,
+                    permissibleHeight: 340,
+                  ),
             const SizedBox(
               height: 40,
             ),
