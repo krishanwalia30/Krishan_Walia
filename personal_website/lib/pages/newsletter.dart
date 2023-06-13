@@ -71,13 +71,15 @@ class _NewsletterPageState extends State<NewsletterPage> {
               key: _formKey,
               child: Container(
                 width: MediaQuery.of(context).size.width / 2,
-                child: Row(
+                height: (MediaQuery.of(context).size.width <= 740) ? 140 : 80,
+                child: Flex(
+                  direction: (MediaQuery.of(context).size.width <= 740)
+                      ? Axis.vertical
+                      : Axis.horizontal,
                   children: [
                     Flexible(
-                      flex: 3,
+                      flex: (MediaQuery.of(context).size.width <= 740) ? 0 : 3,
                       child: TextFormField(
-                        // enabled: emailFieldActive,
-
                         validator: (value) {
                           // If empty value, the isEmail function throw a error.
                           // So I changed this function with try and catch.
@@ -123,9 +125,11 @@ class _NewsletterPageState extends State<NewsletterPage> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 35),
+                    (MediaQuery.of(context).size.width <= 740)
+                        ? const SizedBox(height: 15)
+                        : const SizedBox(width: 35),
                     Flexible(
-                      flex: 1,
+                      flex: (MediaQuery.of(context).size.width <= 740) ? 0 : 1,
                       child: InkWell(
                         hoverColor: Colors.purple.shade100,
                         onTap: () {
@@ -179,7 +183,7 @@ class _NewsletterPageState extends State<NewsletterPage> {
               ),
             ),
             const SizedBox(
-              height: 35,
+              height: 15,
             ),
             (MediaQuery.of(context).size.width <= 700)
                 ? const MobileBlogLayout(

@@ -23,6 +23,8 @@ class MobileBlogLayout extends StatelessWidget {
       height: (320 * (contentIndex.length)).toDouble(),
       width: double.maxFinite,
       child: ListView.builder(
+        shrinkWrap: true,
+        physics: ClampingScrollPhysics(),
         itemBuilder: (context, index) {
           return Column(
             children: [
@@ -56,6 +58,8 @@ class MobileProjectsLayout extends StatelessWidget {
       height: (320 * (contentIndex.length)).toDouble(),
       width: double.maxFinite,
       child: ListView.builder(
+        shrinkWrap: true,
+        physics: ClampingScrollPhysics(),
         itemBuilder: (context, index) {
           return Column(
             children: [

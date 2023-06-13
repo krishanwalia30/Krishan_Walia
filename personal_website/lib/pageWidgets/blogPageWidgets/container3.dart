@@ -9,7 +9,6 @@ import '../../commonWidgets/containerContentWidget.dart';
 class Container3 extends StatelessWidget {
   final bool projectsPage;
   final List<ContainerData> content;
-  // final double permissibleWidth;
   final double permissibleHeight;
   const Container3({
     Key? key,

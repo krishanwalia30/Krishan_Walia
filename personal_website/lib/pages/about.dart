@@ -24,7 +24,7 @@ class AboutPage extends StatelessWidget {
                 children: [
                   profilePicture(
                     context,
-                    'https://avatars.githubusercontent.com/u/101003187?v=4',
+                    'https://avatars.githubusercontent.com/u/101003187?s=400&u=676f5e4d4ad0210a6da1f811055d4b6638d5af5f&v=4',
                   ),
                   const SizedBox(height: 15),
                   AboutContentContainer('About Me', AboutMe),
@@ -67,6 +67,8 @@ class AboutPage extends StatelessWidget {
 
   Widget profilePicture(BuildContext context, String imageLink) {
     return CircleAvatar(
+      // foregroundColor: Colors.grey,
+      backgroundColor: Colors.grey[350],
       foregroundImage: NetworkImage(imageLink, scale: 0.5),
       // radius: MediaQuery.of(context).size.width / 10,
       minRadius: 50,
@@ -177,7 +179,10 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                if (MediaQuery.of(context).size.width <= 380)
+                  SizedBox(
+                    height: 0,
+                  ),
 
                 // Frameworks and Libraries Used Block- Title
                 Padding(
@@ -240,7 +245,6 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
               ],
             ),
           ),
