@@ -179,10 +179,9 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                if (MediaQuery.of(context).size.width <= 380)
-                  SizedBox(
-                    height: 0,
-                  ),
+                (MediaQuery.of(context).size.width <= 380)
+                    ? SizedBox(height: 0)
+                    : SizedBox(height: 30),
 
                 // Frameworks and Libraries Used Block- Title
                 Padding(
@@ -190,7 +189,6 @@ class AboutPage extends StatelessWidget {
                   child: Container(
                     width: double.maxFinite,
                     child: const Flex(
-                      // mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       direction: Axis.vertical,
                       children: [

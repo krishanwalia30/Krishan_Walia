@@ -69,7 +69,7 @@ class ContainerContentWidgetProject extends StatelessWidget {
         Flexible(
           flex: 3,
           child: Image(
-            image: NetworkImage(imageLink),
+            image: AssetImage(imageLink),
             fit: BoxFit.cover,
             width: double.maxFinite,
             height: double.maxFinite,
