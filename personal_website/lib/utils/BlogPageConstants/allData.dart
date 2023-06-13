@@ -6,6 +6,7 @@ import '../constants.dart';
 
 // List of all the blogs in one place
 List<ContainerData> AllBlogs = [
+  BlogData7,
   LeftContainer1Data,
   RightTopContainer1Data,
   RightBottomContainer1Data,
@@ -17,6 +18,19 @@ List<ContainerData> AllBlogs = [
   BlogData5,
   BlogData6,
 ];
+
+// New Blog Published
+ContainerData BlogData7 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/1*L0eyAL1I1r94wiCKapsGig.jpeg',
+  Title: 'Publish/Deploy flutter web apps on Netlify for free',
+  Desc:
+      'In this article, we will be going through the process that is to be followed for deploying our flutter-based web apps on Netlify, and that too for free.',
+  Url:
+      'https://medium.com/@krishanw30/publish-deploy-flutter-web-apps-on-netlify-for-free-486ae0556342',
+  Date: '9 Jun 2023',
+  Tags: 'Flutter Web',
+);
 
 //  Data for Left Container1 in Blog Page
 ContainerData LeftContainer1Data = ContainerData(

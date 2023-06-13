@@ -19,69 +19,71 @@ class LayoutContainer1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 500,
-      width: MediaQuery.of(context).size.width,
-      margin: marginHorizontal,
-      child: Row(
-        children: [
-          Flexible(
-            flex: 1,
-            child: InkWell(
-              hoverColor: Colors.transparent,
-              onTap: () {
-                launchUrlString(AllBlogs[0].Url);
-              },
-              child: LeftContainer1(
-                AllBlogs[0].ImageLink,
-                AllBlogs[0].Title,
-                AllBlogs[0].Desc,
-                AllBlogs[0].Date,
-                AllBlogs[0].Tags,
+    return SingleChildScrollView(
+      child: Container(
+        height: 500,
+        width: MediaQuery.of(context).size.width,
+        margin: marginHorizontal,
+        child: Row(
+          children: [
+            Flexible(
+              flex: 1,
+              child: InkWell(
+                hoverColor: Colors.transparent,
+                onTap: () {
+                  launchUrlString(AllBlogs[0].Url);
+                },
+                child: LeftContainer1(
+                  AllBlogs[0].ImageLink,
+                  AllBlogs[0].Title,
+                  AllBlogs[0].Desc,
+                  AllBlogs[0].Date,
+                  AllBlogs[0].Tags,
+                ),
               ),
             ),
-          ),
-          const SizedBox(width: 15),
-          Flexible(
-            flex: 1,
-            child: Column(
-              children: [
-                Flexible(
-                  flex: 1,
-                  child: InkWell(
-                    hoverColor: Colors.transparent,
-                    onTap: () {
-                      launchUrlString(AllBlogs[1].Url);
-                    },
-                    child: RightContainer1(
-                      AllBlogs[1].ImageLink,
-                      AllBlogs[1].Title,
-                      AllBlogs[1].Desc,
-                      AllBlogs[1].Date,
-                      AllBlogs[1].Tags,
+            const SizedBox(width: 15),
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: () {
+                        launchUrlString(AllBlogs[1].Url);
+                      },
+                      child: RightContainer1(
+                        AllBlogs[1].ImageLink,
+                        AllBlogs[1].Title,
+                        AllBlogs[1].Desc,
+                        AllBlogs[1].Date,
+                        AllBlogs[1].Tags,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 15),
-                Flexible(
-                  flex: 1,
-                  child: InkWell(
-                    hoverColor: Colors.transparent,
-                    onTap: () {
-                      launchUrlString(AllBlogs[2].Url);
-                    },
-                    child: RightContainer1(
-                        AllBlogs[2].ImageLink,
-                        AllBlogs[2].Title,
-                        AllBlogs[2].Desc,
-                        AllBlogs[2].Date,
-                        AllBlogs[2].Tags),
+                  const SizedBox(height: 15),
+                  Flexible(
+                    flex: 1,
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: () {
+                        launchUrlString(AllBlogs[2].Url);
+                      },
+                      child: RightContainer1(
+                          AllBlogs[2].ImageLink,
+                          AllBlogs[2].Title,
+                          AllBlogs[2].Desc,
+                          AllBlogs[2].Date,
+                          AllBlogs[2].Tags),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
