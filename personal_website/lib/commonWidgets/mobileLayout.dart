@@ -32,7 +32,7 @@ class MobileBlogLayout extends StatelessWidget {
                   onTap: () =>
                       launchUrlString(AllBlogs[contentIndex[index]].Url),
                   hoverColor: Colors.transparent,
-                  child: MobileContainer(AllBlogs[contentIndex[index]])),
+                  child: MobileContainer(AllBlogs[contentIndex[index]], false)),
               const SizedBox(
                 height: 20,
               )
@@ -67,7 +67,8 @@ class MobileProjectsLayout extends StatelessWidget {
                   onTap: () =>
                       launchUrlString(allProjects[contentIndex[index]].Url),
                   hoverColor: Colors.transparent,
-                  child: MobileContainer(allProjects[contentIndex[index]])),
+                  child:
+                      MobileContainer(allProjects[contentIndex[index]], true)),
               const SizedBox(
                 height: 20,
               )
@@ -80,7 +81,7 @@ class MobileProjectsLayout extends StatelessWidget {
   }
 }
 
-Widget MobileContainer(ContainerData element) {
+Widget MobileContainer(ContainerData element, bool projectsPage) {
   return Container(
     margin: marginHorizontal,
     width: double.maxFinite,
@@ -90,11 +91,17 @@ Widget MobileContainer(ContainerData element) {
       children: [
         Flexible(
             flex: 1,
-            child: Image(
-              image: NetworkImage(element.ImageLink),
-              fit: BoxFit.cover,
-              width: double.maxFinite,
-            )),
+            child: (projectsPage)
+                ? Image(
+                    image: AssetImage(element.ImageLink),
+                    fit: BoxFit.cover,
+                    width: double.maxFinite,
+                  )
+                : Image(
+                    image: NetworkImage(element.ImageLink),
+                    fit: BoxFit.cover,
+                    width: double.maxFinite,
+                  )),
         DateWidget(Date: element.Date),
         const SizedBox(height: 5),
         TitleWidget(Title: element.Title),
