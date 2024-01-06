@@ -206,6 +206,16 @@ class _NewsletterPageState extends State<NewsletterPage> {
                 : const Container4(
                     // permissibleWidth: MediaQuery.of(context).size.width,
                     permissibleHeight: 340,
+                    contentIndex: [7, 8, 9],
+                  ),
+            (MediaQuery.of(context).size.width <= 700)
+                ? const MobileBlogLayout(
+                    contentIndex: [10, 11, 12],
+                  )
+                : const Container4(
+                    // permissibleWidth: MediaQuery.of(context).size.width,
+                    permissibleHeight: 340,
+                    contentIndex: [10, 11, 12],
                   ),
             const SizedBox(
               height: 40,

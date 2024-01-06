@@ -9,10 +9,12 @@ import '../../commonWidgets/containerContentWidget.dart';
 class Container4 extends StatelessWidget {
   // final double permissibleWidth;
   final double permissibleHeight;
+  final List contentIndex;
   const Container4({
     Key? key,
     // required this.permissibleWidth,
     required this.permissibleHeight,
+    required this.contentIndex,
   }) : super(key: key);
 
   @override
@@ -28,14 +30,14 @@ class Container4 extends StatelessWidget {
             child: InkWell(
               hoverColor: Colors.transparent,
               onTap: () {
-                launchUrlString(AllBlogs[7].Url);
+                launchUrlString(AllBlogs[contentIndex[0]].Url);
               },
               child: ContainerContentWidget(
-                imageLink: AllBlogs[7].ImageLink,
-                title: AllBlogs[7].Title,
-                desc: AllBlogs[7].Desc,
-                date: AllBlogs[7].Date,
-                tag: AllBlogs[7].Tags,
+                imageLink: AllBlogs[contentIndex[0]].ImageLink,
+                title: AllBlogs[contentIndex[0]].Title,
+                desc: AllBlogs[contentIndex[0]].Desc,
+                date: AllBlogs[contentIndex[0]].Date,
+                tag: AllBlogs[contentIndex[0]].Tags,
               ),
             ),
           ),
@@ -45,14 +47,14 @@ class Container4 extends StatelessWidget {
             child: InkWell(
               hoverColor: Colors.transparent,
               onTap: () {
-                launchUrlString(AllBlogs[8].Url);
+                launchUrlString(AllBlogs[contentIndex[1]].Url);
               },
               child: ContainerContentWidget(
-                imageLink: AllBlogs[8].ImageLink,
-                title: AllBlogs[8].Title,
-                desc: AllBlogs[8].Desc,
-                date: AllBlogs[8].Date,
-                tag: AllBlogs[8].Tags,
+                imageLink: AllBlogs[contentIndex[1]].ImageLink,
+                title: AllBlogs[contentIndex[1]].Title,
+                desc: AllBlogs[contentIndex[1]].Desc,
+                date: AllBlogs[contentIndex[1]].Date,
+                tag: AllBlogs[contentIndex[1]].Tags,
               ),
             ),
           ),
@@ -62,14 +64,14 @@ class Container4 extends StatelessWidget {
             child: InkWell(
               hoverColor: Colors.transparent,
               onTap: () {
-                launchUrlString(AllBlogs[9].Url);
+                launchUrlString(AllBlogs[contentIndex[2]].Url);
               },
               child: ContainerContentWidget(
-                imageLink: AllBlogs[9].ImageLink,
-                title: AllBlogs[9].Title,
-                desc: AllBlogs[9].Desc,
-                date: AllBlogs[9].Date,
-                tag: AllBlogs[9].Tags,
+                imageLink: AllBlogs[contentIndex[2]].ImageLink,
+                title: AllBlogs[contentIndex[2]].Title,
+                desc: AllBlogs[contentIndex[2]].Desc,
+                date: AllBlogs[contentIndex[2]].Date,
+                tag: AllBlogs[contentIndex[2]].Tags,
               ),
             ),
           ),

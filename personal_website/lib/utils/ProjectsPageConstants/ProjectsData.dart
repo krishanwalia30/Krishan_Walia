@@ -1,12 +1,23 @@
 import 'package:personal_website/utils/constants.dart';
 
 List<ContainerData> allProjects = [
+  Project6,
   Project1,
   Project2,
   Project3,
   Project4,
   Project5,
 ];
+
+ContainerData Project6 = ContainerData(
+    ImageLink: "assets/images/project1.png",
+    Title: 'Web Scraper To Extract College Notices',
+    Desc:
+        'This is a web scraper made using the prebuilt packages of nodejs, to extract the notices published on the College website for on-time alert and notification, in order to comply to the important instructions and notices being published by the university on their main website.',
+    Url:
+        'https://github.com/krishanwalia30/Web_Scraper_To_Extract_College_Notices',
+    Date: '28 Dec 2022',
+    Tags: 'Web Scraper');
 
 ContainerData Project1 = ContainerData(
     ImageLink: "assets/images/project1.png",

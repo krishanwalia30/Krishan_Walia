@@ -79,6 +79,27 @@ class BlogPage extends StatelessWidget {
                   )
                 : const Container4(
                     permissibleHeight: 340,
+                    contentIndex: [7, 8, 9],
+                    // permissibleWidth: MediaQuery.of(context).size.width - 224,
+                  ),
+            const SizedBox(height: 20),
+            (MediaQuery.of(context).size.width <= 700)
+                ? const MobileBlogLayout(
+                    contentIndex: [10, 11, 12],
+                  )
+                : const Container4(
+                    permissibleHeight: 340,
+                    contentIndex: [10, 11, 12],
+                    // permissibleWidth: MediaQuery.of(context).size.width - 224,
+                  ),
+            const SizedBox(height: 20),
+            (MediaQuery.of(context).size.width <= 700)
+                ? const MobileBlogLayout(
+                    contentIndex: [13, 14, 15],
+                  )
+                : const Container4(
+                    permissibleHeight: 340,
+                    contentIndex: [13, 14, 15],
                     // permissibleWidth: MediaQuery.of(context).size.width - 224,
                   ),
             const SizedBox(

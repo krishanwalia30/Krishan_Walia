@@ -6,6 +6,12 @@ import '../constants.dart';
 
 // List of all the blogs in one place
 List<ContainerData> AllBlogs = [
+  BlogData14,
+  BlogData13,
+  BlogData12,
+  BlogData11,
+  BlogData10,
+  BlogData9,
   BlogData8,
   BlogData7,
   LeftContainer1Data,
@@ -19,6 +25,86 @@ List<ContainerData> AllBlogs = [
   BlogData5,
   BlogData6,
 ];
+
+// New Blog Published
+ContainerData BlogData14 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/1*VDQembr6yv65fC-v8N0CLw.png',
+  Title:
+      'Complete project structure for an end-to-end Machine Learning Pipeline project',
+  Desc:
+      'The complete project structure followed in the industry which you should definitely use in your next machine learning project, to make it more readable and inclined with industry standards.',
+  Url:
+      'https://medium.com/@krishanw30/complete-project-structure-for-an-end-to-end-machine-learning-pipeline-project-7a2b1b6c9bc7',
+  Date: '1 Jan 2024',
+  Tags: 'Machine learning pipeline',
+);
+
+// New Blog Published
+ContainerData BlogData13 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*WZsOuBKP2dds_VY1JXIHWw.png',
+  Title: 'What would be the estimated cost of developing an app?',
+  Desc:
+      'Know about all the major factors affecting the total expense related to developing an app.',
+  Url:
+      'https://medium.com/illumination/what-would-be-the-estimated-cost-of-developing-an-app-b14e6f474ab4',
+  Date: '23 Oct 2023',
+  Tags: 'App Dev Cost',
+);
+
+// New Blog Published
+ContainerData BlogData12 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/1*wAXJNbR6ON_A-6HFMavtRQ.jpeg',
+  Title: 'Use stunning bootstrap icons in your Flutter apps',
+  Desc:
+      'Leverage the rich set of icons provided by Bootstrap in your Flutter app to make your app more stunning and captivating, easily by using this package.',
+  Url:
+      'https://medium.com/design-bootcamp/use-stunning-bootstrap-icons-in-your-flutter-apps-17e80f4770d5',
+  Date: '5 Sep 2023',
+  Tags: 'Flutter Ant Design',
+);
+
+// New Blog Published
+ContainerData BlogData11 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/1*VIQnbi9GD_RwEtLwZs4gTA.jpeg',
+  Title:
+      'Create amazing user-interface in flutter apps using ant-design components',
+  Desc:
+      'Easily integrate user-friendly components and widgets offered by ant-design into your Flutter apps. These ant-design components can make the UI of your Flutter app more clean and beautiful.',
+  Url:
+      'https://medium.com/design-bootcamp/create-amazing-user-interface-in-flutter-apps-using-ant-design-components-2dea0bedbb43',
+  Date: '31 Aug 2023',
+  Tags: 'Flutter Ant Design',
+);
+
+// New Blog Published
+ContainerData BlogData10 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/0*ngQfy-fmwgwvf-xR.jpg',
+  Title: 'Quantum Computing is Future: A Brief',
+  Desc:
+      'Let’s dive into the quantum realm and see what this new technology has to offer mankind.',
+  Url:
+      'https://medium.com/design-bootcahttps://medium.com/illumination/quantum-computing-is-future-a-brief-b439a499d2camp/create-amazing-onboarding-pages-in-flutter-apps-5b0f5d756b30',
+  Date: '4 Aug 2023',
+  Tags: 'Quantum Computing',
+);
+
+// New Blog Published
+ContainerData BlogData9 = ContainerData(
+  ImageLink:
+      'https://miro.medium.com/v2/resize:fit:828/format:webp/1*UTDI9zoyacfe7AqeeFvQkg.png',
+  Title: 'Create amazing onboarding pages in flutter apps',
+  Desc:
+      'Wanna make great intriguing onboarding pages for your flutter app easily and quickly! It’s for you…',
+  Url:
+      'https://medium.com/design-bootcamp/create-amazing-onboarding-pages-in-flutter-apps-5b0f5d756b30',
+  Date: '25 Jul 2023',
+  Tags: 'Flutter App',
+);
 
 // New Blog Published
 ContainerData BlogData8 = ContainerData(
