@@ -6,6 +6,7 @@ import '../constants.dart';
 
 // List of all the blogs in one place
 List<ContainerData> AllBlogs = [
+  BlogData8,
   BlogData7,
   LeftContainer1Data,
   RightTopContainer1Data,
@@ -18,6 +19,18 @@ List<ContainerData> AllBlogs = [
   BlogData5,
   BlogData6,
 ];
+
+// New Blog Published
+ContainerData BlogData8 = ContainerData(
+  ImageLink: 'https://miro.medium.com/v2/format:webp/0*futJ7GGpuL-ukU2h',
+  Title: 'Tutorial to create great onboarding pages in flutter apps',
+  Desc:
+      'A complete tutorial to teach you how you can create amazing and informative onboarding pages for you flutter app easily and quickly with a help of a simple package.',
+  Url:
+      'https://bootcamp.uxdesign.cc/tutorial-to-create-great-onboarding-pages-in-flutter-apps-d1198c81e0ff',
+  Date: '25 Jul 2023',
+  Tags: 'Flutter App',
+);
 
 // New Blog Published
 ContainerData BlogData7 = ContainerData(
